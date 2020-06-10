@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Teko:300,400&display=swap');
 
+
+// font
+$Niconne:  'Niconne', cursive;
+$Teko: 'Teko', sans-serif;;
+
 *, *::before, *::after{
     padding: 0; margin: 0; box-sizing: border-box;
 }
@@ -17,6 +22,7 @@ section {
 }
 
 header {
+    position: relative;
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(16,29,44,.95), rgba(16,29,44,.95)),
@@ -30,7 +36,7 @@ header {
         justify-content: space-between;
         a {
             img {
-                width: 10%;
+                width: 10rem;
                 height: auto;
             }
         }
@@ -38,10 +44,76 @@ header {
             list-style: none;
             display: flex;
             .nav-item {
+                padding: 4rem 2rem;
                 .nav-link {
-                    padding: 0 2rem;
+                   text-align: center;
+                   text-decoration: none;
+                   color: #fff;
+                   font-size: 1.2rem;
+                   font-weight: 300;
+                   position: relative;
+                   &::before {
+                       content: "";
+                       position: absolute;
+                       bottom: -5px;
+                       left: 0;
+                       width: 100%;
+                       height: 3px;
+                       background-color: #c69963;
+                       transform: scaleX(0);
+                       transform-origin: center;
+                       transition: .4s;
+                   }
+                   &:hover::before {
+                       transform: scaleX(1);
+                   }
                 }
             }
         }
     }
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        h1 {
+            font-family: $Niconne;
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #c69963;
+            line-height: 1.2;
+        }
+        p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        .btn {
+            display: inline-block;
+            width: 150px;
+            border: 1px solid #c69963;
+            padding: .5rem 0rem;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            margin: 0 .5rem 0 .5rem;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                transition: all .5s;
+            }
+            &:hover::before {
+                left: 100%;
+            }
+        }
+    }
 }
+

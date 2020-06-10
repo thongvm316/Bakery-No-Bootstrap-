@@ -18,6 +18,7 @@ section {
 }
 
 header {
+  position: relative;
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(16, 29, 44, 0.95), rgba(16, 29, 44, 0.95)), url("../img/header-bg.jpg") center no-repeat;
@@ -31,15 +32,82 @@ header nav {
   justify-content: space-between;
 }
 header nav a img {
-  width: 10%;
+  width: 10rem;
   height: auto;
 }
 header nav .nav-list {
   list-style: none;
   display: flex;
 }
+header nav .nav-list .nav-item {
+  padding: 4rem 2rem;
+}
 header nav .nav-list .nav-item .nav-link {
-  padding: 0 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  position: relative;
+}
+header nav .nav-list .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #c69963;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: 0.4s;
+}
+header nav .nav-list .nav-item .nav-link:hover::before {
+  transform: scaleX(1);
+}
+header .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+header .hero-text h1 {
+  font-family: "Niconne", cursive;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #c69963;
+  line-height: 1.2;
+}
+header .hero-text p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+header .hero-text .btn {
+  display: inline-block;
+  width: 150px;
+  border: 1px solid #c69963;
+  padding: 0.5rem 0rem;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0.5rem 0 0.5rem;
+}
+header .hero-text .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.5s;
+}
+header .hero-text .btn:hover::before {
+  left: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
