@@ -155,6 +155,9 @@ main {
             display: flex;
             .left {
                 width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 .section-heading {
                     @extend %extend-section-heading;
                 }
@@ -223,13 +226,14 @@ main {
             }
             .row {
                 display: flex;
-                height: 17rem;
+                height: 320px;
+                overflow: hidden;
                 > div {
                     flex: 1;
                 }
                 .img-fluid {
                     max-width: 100%;
-                    height: 100%;
+                    height: auto;
                 }
                 .menu-item {
                     background-color: #fff;
@@ -261,6 +265,20 @@ main {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .chef {
+        .container {
+            text-align: center;
+            .section-heading {
+                @extend %extend-section-heading;
+            }
+            .row {
+                display: flex;
+                justify-content: center;
+                width: 100%;
             }
         }
     }

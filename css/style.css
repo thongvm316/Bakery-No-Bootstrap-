@@ -32,7 +32,7 @@ main .menu .container-fluid .row .menu-item a, main .about .container .left a, h
   text-decoration: none;
 }
 
-main .menu .container-fluid .section-heading h4, main .about .container .left .section-heading h4 {
+main .chef .container .section-heading h4, main .menu .container-fluid .section-heading h4, main .about .container .left .section-heading h4 {
   text-transform: uppercase;
   color: #101d2c;
   line-height: 0;
@@ -41,7 +41,7 @@ main .menu .container-fluid .section-heading h4, main .about .container .left .s
   font-weight: 300;
   letter-spacing: 1px;
 }
-main .menu .container-fluid .section-heading h1, main .about .container .left .section-heading h1 {
+main .chef .container .section-heading h1, main .menu .container-fluid .section-heading h1, main .about .container .left .section-heading h1 {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2;
@@ -143,6 +143,9 @@ main .about .container {
 }
 main .about .container .left {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 main .about .container .left p {
   font-size: 1rem;
@@ -201,14 +204,15 @@ main .menu .container-fluid .section-heading h4 {
 }
 main .menu .container-fluid .row {
   display: flex;
-  height: 17rem;
+  height: 320px;
+  overflow: hidden;
 }
 main .menu .container-fluid .row > div {
   flex: 1;
 }
 main .menu .container-fluid .row .img-fluid {
   max-width: 100%;
-  height: 100%;
+  height: auto;
 }
 main .menu .container-fluid .row .menu-item {
   background-color: #fff;
@@ -238,6 +242,14 @@ main .menu .container-fluid .row .menu-item a {
 main .menu .container-fluid .row .menu-item a:hover {
   background-color: #c69963;
   color: #fff;
+}
+main .chef .container {
+  text-align: center;
+}
+main .chef .container .row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
